@@ -41,4 +41,9 @@ export class DashboardComponent {
     return Math.floor(Math.random() * 90) + 1;
   }
 
+  clear() {
+    this.numberList.splice(0, this.numberList.length);
+    console.log(this.numberList);
+  }
+
 }
