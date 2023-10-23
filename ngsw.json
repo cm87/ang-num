@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1698063712785,
+  "timestamp": 1698066127422,
   "index": "https://cm87.github.io/ang-num/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://cm87.github.io/ang-num/favicon.ico",
         "https://cm87.github.io/ang-num/index.html",
-        "https://cm87.github.io/ang-num/main.faf1a8896de4325ce026.js",
+        "https://cm87.github.io/ang-num/main.2768757c34bcb0f3b3b7.js",
         "https://cm87.github.io/ang-num/manifest.webmanifest",
         "https://cm87.github.io/ang-num/polyfills.ecb56e8ff2b69cc92765.js",
         "https://cm87.github.io/ang-num/runtime.05d4270ea09794982086.js",
@@ -52,8 +52,8 @@
     "https://cm87.github.io/ang-num/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://cm87.github.io/ang-num/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://cm87.github.io/ang-num/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://cm87.github.io/ang-num/index.html": "f7118646ca29618b81ce3a5cfb16136e17c86d9d",
-    "https://cm87.github.io/ang-num/main.faf1a8896de4325ce026.js": "958bf694f5183342e182215b60aafae6ed347b48",
+    "https://cm87.github.io/ang-num/index.html": "e83daba31de93a4dc0a1bbb875a751407b9f77ec",
+    "https://cm87.github.io/ang-num/main.2768757c34bcb0f3b3b7.js": "b131b6a3c4f8f460e4ee790053ff4beb2180c8e8",
     "https://cm87.github.io/ang-num/manifest.webmanifest": "fdbbb8b8bdd1b0bfa64376a61b2ee6f04a823157",
     "https://cm87.github.io/ang-num/polyfills.ecb56e8ff2b69cc92765.js": "61c3fc2cb1284917e3e7655d01c451b0ff3e3dc8",
     "https://cm87.github.io/ang-num/runtime.05d4270ea09794982086.js": "cf687c2a3047fc8ba476f64b67efbe16c95d65aa",
