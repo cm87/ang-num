@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1699107942729,
-  "index": "'https://cm87.github.io/ang-num/'/index.html",
+  "timestamp": 1699113354842,
+  "index": "https://cm87.github.io/ang-num/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "'https://cm87.github.io/ang-num/'/favicon.ico",
-        "'https://cm87.github.io/ang-num/'/index.html",
-        "'https://cm87.github.io/ang-num/'/main.66751fa8a064010c4cea.js",
-        "'https://cm87.github.io/ang-num/'/manifest.webmanifest",
-        "'https://cm87.github.io/ang-num/'/polyfills.ecb56e8ff2b69cc92765.js",
-        "'https://cm87.github.io/ang-num/'/runtime.05d4270ea09794982086.js",
-        "'https://cm87.github.io/ang-num/'/styles.d258abc18dafc1ad4560.css"
+        "https://cm87.github.io/ang-num/favicon.ico",
+        "https://cm87.github.io/ang-num/index.html",
+        "https://cm87.github.io/ang-num/main.66751fa8a064010c4cea.js",
+        "https://cm87.github.io/ang-num/manifest.webmanifest",
+        "https://cm87.github.io/ang-num/polyfills.ecb56e8ff2b69cc92765.js",
+        "https://cm87.github.io/ang-num/runtime.05d4270ea09794982086.js",
+        "https://cm87.github.io/ang-num/styles.d258abc18dafc1ad4560.css"
       ],
       "patterns": []
     },
@@ -29,35 +29,35 @@
         "ignoreVary": true
       },
       "urls": [
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-128x128.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-144x144.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-152x152.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-192x192.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-384x384.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-512x512.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-72x72.png",
-        "'https://cm87.github.io/ang-num/'/assets/icons/icon-96x96.png"
+        "https://cm87.github.io/ang-num/assets/icons/icon-128x128.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-144x144.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-152x152.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-192x192.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-384x384.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-512x512.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-72x72.png",
+        "https://cm87.github.io/ang-num/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "'https://cm87.github.io/ang-num/'/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "'https://cm87.github.io/ang-num/'/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "'https://cm87.github.io/ang-num/'/index.html": "c64bd9106ccc6aa6d84b9e2834e6ce64ac15c513",
-    "'https://cm87.github.io/ang-num/'/main.66751fa8a064010c4cea.js": "7f0b8407322ff884dfc992b411ce979cfeaae6d1",
-    "'https://cm87.github.io/ang-num/'/manifest.webmanifest": "fdbbb8b8bdd1b0bfa64376a61b2ee6f04a823157",
-    "'https://cm87.github.io/ang-num/'/polyfills.ecb56e8ff2b69cc92765.js": "61c3fc2cb1284917e3e7655d01c451b0ff3e3dc8",
-    "'https://cm87.github.io/ang-num/'/runtime.05d4270ea09794982086.js": "cf687c2a3047fc8ba476f64b67efbe16c95d65aa",
-    "'https://cm87.github.io/ang-num/'/styles.d258abc18dafc1ad4560.css": "301dc86c659f20d7080c286bb32073a3544a51e4"
+    "https://cm87.github.io/ang-num/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://cm87.github.io/ang-num/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://cm87.github.io/ang-num/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://cm87.github.io/ang-num/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://cm87.github.io/ang-num/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://cm87.github.io/ang-num/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://cm87.github.io/ang-num/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://cm87.github.io/ang-num/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://cm87.github.io/ang-num/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://cm87.github.io/ang-num/index.html": "4bafca45eb37853428e8a3b4bad13530cf63d170",
+    "https://cm87.github.io/ang-num/main.66751fa8a064010c4cea.js": "7f0b8407322ff884dfc992b411ce979cfeaae6d1",
+    "https://cm87.github.io/ang-num/manifest.webmanifest": "fdbbb8b8bdd1b0bfa64376a61b2ee6f04a823157",
+    "https://cm87.github.io/ang-num/polyfills.ecb56e8ff2b69cc92765.js": "61c3fc2cb1284917e3e7655d01c451b0ff3e3dc8",
+    "https://cm87.github.io/ang-num/runtime.05d4270ea09794982086.js": "cf687c2a3047fc8ba476f64b67efbe16c95d65aa",
+    "https://cm87.github.io/ang-num/styles.d258abc18dafc1ad4560.css": "301dc86c659f20d7080c286bb32073a3544a51e4"
   },
   "navigationUrls": [
     {
