@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/service/data.service';
 
 
 @Component({
@@ -6,44 +7,23 @@ import { Component } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
   numberList: Array<Array<number>> = [];
 
-  constructor() {
+  constructor(private dataService: DataService) {
+  }
+
+  ngOnInit(): void {
+    this.generate();
   }
 
   generate() {
-    this.numberList = [];
-    this.numberList.push(this.generateNumbers());
-    this.numberList.push(this.generateNumbers());
-  }
-
-  generateNumbers(): number[] {
-    let numbers: number[] = [];
-    let result: number[] = [];
-
-    while (numbers.length < 6) {
-      let randomNumber = this.calcNumberFromOneToNinethy();
-
-      if (!numbers.includes(randomNumber)) {
-        numbers.push(randomNumber);
-      }
-    }
-    const superstar = this.calcNumberFromOneToNinethy();
-
-    result = numbers.sort((n1, n2) => n1 - n2);
-    result.push(superstar);
-    return result;
-  }
-
-  calcNumberFromOneToNinethy(): number {
-    return Math.floor(Math.random() * 90) + 1;
+    this.numberList = this.dataService.generate();
   }
 
   clear() {
-    this.numberList.splice(0, this.numberList.length);
-    console.log(this.numberList);
+   this.numberList = this.dataService.clear();
   }
 
 }

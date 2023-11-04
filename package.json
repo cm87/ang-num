@@ -9,7 +9,9 @@
     "build-prod": "set NODE_OPTIONS=--openssl-legacy-provider && ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start-pwa": "set NODE_OPTIONS=--openssl-legacy-provider && ng build && http-server -p 8080 -c-1 dist/angular-pwa"
+    "start-pwa": "set NODE_OPTIONS=--openssl-legacy-provider && ng build && http-server -p 8080 -c-1 dist/angular-pwa",
+    "build-github": "set NODE_OPTIONS=--openssl-legacy-provider && ng build --prod --base-href 'https://cm87.github.io/ang-num/'",
+    "deploy-pages": "npx angular-cli-ghpages --dir=dist/angular-numbers"
   },
   "private": true,
   "dependencies": {

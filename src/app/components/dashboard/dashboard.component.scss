@@ -1,12 +1,21 @@
 table {
     overflow-x: auto;
+    width: 100%;
 }
 
 table, th, td {
-    border: 1px solid rgb(1, 14, 38);
+    border: 1px solid rgb(42, 113, 245);
     border-collapse: collapse;
 }
 
 .text-large {
     font-size:x-large;
+}
+
+.red {
+    color: #e00404
+}
+
+.blue {
+    color:#0039f5
 }
