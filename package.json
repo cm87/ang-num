@@ -4,15 +4,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start2": "set NODE_OPTIONS=--openssl-legacy-provider && ng serve --host 0.0.0.0",
+    "start2": "ng serve --host 0.0.0.0",
     "build": "ng build",
-    "build-prod": "set NODE_OPTIONS=--openssl-legacy-provider && ng build --configuration production",
+    "build-prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start-pwa": "set NODE_OPTIONS=--openssl-legacy-provider && ng build && http-server -p 8080 -c-1 dist/angular-numbers",
-    "build-github": "set NODE_OPTIONS=--openssl-legacy-provider && ng build --configuration production --base-href='https://cm87.github.io/ang-num/'",
+    "start-pwa": "ng build && http-server -p 8080 -c-1 dist/angular-numbers",
+    "build-github": "ng build --configuration production --base-href=https://cm87.github.io/ang-num/",
+    "deploy:404": "copy dist\\angular-numbers\\index.html dist\\angular-numbers\\404.html",
     "deploy-pages": "npx angular-cli-ghpages --dir=dist/angular-numbers",
-    "deploy": "npm run build-github && npm run deploy-pages"
+    "deploy": "npm run build-github && npm run deploy:404 && npm run deploy-pages"
   },
   "private": true,
   "dependencies": {
