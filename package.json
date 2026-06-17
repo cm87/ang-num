@@ -10,10 +10,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start-pwa": "set NODE_OPTIONS=--openssl-legacy-provider && ng build && http-server -p 8080 -c-1 dist/angular-numbers",
-    "deploy:build": "ng build --configuration production --base-href=/ang-num/",
-    "deploy:copy404": "copy dist\\angular-numbers\\index.html dist\\angular-numbers\\404.html",
-    "deploy:push": "npx gh-pages -d dist/angular-numbers",
-    "deploy": "npm run deploy:build && npm run deploy:copy404 && npm run deploy:push"
+    "build-github": "set NODE_OPTIONS=--openssl-legacy-provider && ng build --configuration production --base-href='https://cm87.github.io/ang-num/'",
+    "deploy-pages": "npx angular-cli-ghpages --dir=dist/angular-numbers",
+    "deploy": "npm run build-github && npm run deploy-pages"
   },
   "private": true,
   "dependencies": {
