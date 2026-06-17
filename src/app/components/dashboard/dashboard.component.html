@@ -1,42 +1,65 @@
-<div class="container">
-    <div class="row mt-3">
-        <div class="col-12">
-            <button type="button" class="btn btn-primary me-2" (click)="generate()">Generate</button>
-            <button type="button" class="btn btn-primary" (click)="clear()">Clear</button>
+<div class="container py-4">
+  <div class="card shadow-sm border-0">
+    <div class="card-body">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mb-4">
+        <h2 class="m-0 fw-bold text-primary">Numbers Generator</h2>
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+          <label for="rowCount" class="text-secondary mb-0">Rows:</label>
+          <input
+            id="rowCount"
+            type="number"
+            class="form-control"
+            style="width: 4.5rem;"
+            [(ngModel)]="rowCount"
+            [min]="1"
+            [max]="maxRows"
+          />
+          <button type="button" class="btn btn-icon btn-generate" title="Generate" aria-label="Generate numbers" (click)="generate()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+              <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+            </svg>
+          </button>
+          <button type="button" class="btn btn-icon btn-clear" title="Clear" aria-label="Clear numbers" (click)="clear()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+            </svg>
+          </button>
         </div>
-    
+      </div>
+
+      <div *ngIf="numberList.length === 0" class="text-center text-muted py-5">
+        <p class="mb-0">Choose the number of rows and click <strong>Generate</strong> to create your numbers.</p>
+      </div>
+
+      <div class="table-responsive" *ngIf="numberList.length > 0">
+        <table class="table table-borderless text-center">
+          <thead>
+            <tr>
+              <th class="text-start text-secondary">Row</th>
+              <th scope="col" class="text-secondary">1</th>
+              <th scope="col" class="text-secondary">2</th>
+              <th scope="col" class="text-secondary">3</th>
+              <th scope="col" class="text-secondary">4</th>
+              <th scope="col" class="text-secondary">5</th>
+              <th scope="col" class="text-secondary">6</th>
+              <th scope="col" class="text-secondary superstar-header">SS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let numbers of numberList; let i = index">
+              <td class="text-start fw-semibold text-secondary align-middle">#{{ i + 1 }}</td>
+              <td *ngFor="let n of numbers.slice(0, 6)">
+                <span class="number-ball">{{ n }}</span>
+              </td>
+              <td>
+                <span class="number-ball superstar">{{ numbers[6] }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="row mt-3">
-        <div class="col-12">
-            <div class="d-flex justify-content-between py-2">
-                <h1>Number List</h1>
-            </div>
-            <table class="table" *ngIf="numberList.length > 0">
-                <thead class="bg-primary text-center">
-                    <tr>
-                        <th scope="col">1</th>
-                        <th scope="col">2</th>
-                        <th scope="col">3</th>
-                        <th scope="col">4</th>
-                        <th scope="col">5</th>
-                        <th scope="col">6</th>
-                        <th scope="col">SS</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-light text-large text-center">
-                    <ng-container *ngFor="let numbers of numberList; let i=index">
-                        <tr>
-                            <td>{{numbers[0]}}</td>
-                            <td>{{numbers[1]}}</td>
-                            <td>{{numbers[2]}}</td>
-                            <td>{{numbers[3]}}</td>
-                            <td>{{numbers[4]}}</td>
-                            <td>{{numbers[5]}}</td>
-                            <th scope="row">{{numbers[6]}}</th>
-                        </tr>
-                    </ng-container>
-                </tbody>
-            </table>
-        </div>
-    </div>
+  </div>
 </div>
