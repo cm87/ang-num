@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { NumberGeneratorService, MAX_ROWS } from '../../service/number-generator.service';
 
