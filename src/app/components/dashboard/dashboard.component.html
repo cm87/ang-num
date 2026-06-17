@@ -37,7 +37,6 @@
         <table class="table table-borderless text-center">
           <thead>
             <tr>
-              <th class="text-start text-secondary">Row</th>
               <th scope="col" class="text-secondary">1</th>
               <th scope="col" class="text-secondary">2</th>
               <th scope="col" class="text-secondary">3</th>
@@ -49,7 +48,6 @@
           </thead>
           <tbody>
             <tr *ngFor="let numbers of numberList; let i = index">
-              <td class="text-start fw-semibold text-secondary align-middle">#{{ i + 1 }}</td>
               <td *ngFor="let n of numbers.slice(0, 6)">
                 <span class="number-ball">{{ n }}</span>
               </td>
