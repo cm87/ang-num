@@ -29,35 +29,27 @@
         </div>
       </div>
 
-      <div *ngIf="numberList.length === 0" class="text-center text-muted py-5">
-        <p class="mb-0">Choose the number of rows and click <strong>Generate</strong> to create your numbers.</p>
-      </div>
+      @if (numberList().length === 0) {
+        <div class="text-center text-muted py-4">
+          <p class="mb-0">Choose the number of rows and click <strong>Generate</strong> to create your numbers.</p>
+        </div>
+      }
 
-      <div class="table-responsive" *ngIf="numberList.length > 0">
-        <table class="table table-borderless text-center">
-          <thead>
-            <tr>
-              <th scope="col" class="text-secondary">1</th>
-              <th scope="col" class="text-secondary">2</th>
-              <th scope="col" class="text-secondary">3</th>
-              <th scope="col" class="text-secondary">4</th>
-              <th scope="col" class="text-secondary">5</th>
-              <th scope="col" class="text-secondary">6</th>
-              <th scope="col" class="text-secondary superstar-header">SS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let numbers of numberList; let i = index">
-              <td *ngFor="let n of numbers.slice(0, 6)">
-                <span class="number-ball">{{ n }}</span>
-              </td>
-              <td>
+      @if (numberList().length > 0) {
+        <div class="row-list">
+          @for (numbers of numberList(); track $index) {
+            <div class="row-card">
+              <div class="row-label">Row {{ $index + 1 }}</div>
+              <div class="row-balls">
+                @for (n of numbers.slice(0, 6); track n) {
+                  <span class="number-ball">{{ n }}</span>
+                }
                 <span class="number-ball superstar">{{ numbers[6] }}</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              </div>
+            </div>
+          }
+        </div>
+      }
     </div>
   </div>
 </div>

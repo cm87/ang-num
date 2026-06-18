@@ -20,18 +20,36 @@
   color: #212529;
 }
 
-.superstar-header {
-  color: #b38f00 !important;
+.row-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-table th,
-table td {
-  padding: 0.25rem 0.375rem;
-  vertical-align: middle;
+.row-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-.table-responsive {
-  overflow-x: auto;
+.row-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.row-balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .btn-icon {
