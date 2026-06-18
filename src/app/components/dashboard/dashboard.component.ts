@@ -39,8 +39,8 @@ export class DashboardComponent implements OnInit {
 
   constructor() {}
 
-  async ngOnInit(): Promise<void> {
-    await this.generate();
+  ngOnInit(): void {
+    this.generate();
   }
 
   /**
@@ -48,9 +48,8 @@ export class DashboardComponent implements OnInit {
    * Ogni riga ha numeri univoci ordinati + superstar diverso dai principali.
    * Nessun numero principale è ripetuto tra righe diverse.
    */
-  async generate(): Promise<void> {
-    const rows = await this.numberGeneratorService.generateRows(this.rowCount);
-    this.numberList.set(rows);
+  generate(): void {
+    this.numberList.set(this.numberGeneratorService.generateRows(this.rowCount));
   }
 
   /**

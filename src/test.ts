@@ -18,4 +18,3 @@ getTestBed().initTestEnvironment(
 import './app/app.component.spec';
 import './app/components/dashboard/dashboard.component.spec';
 import './app/service/number-generator.service.spec';
-import './app/service/statistics.service.spec';

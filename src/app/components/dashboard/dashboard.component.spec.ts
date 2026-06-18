@@ -11,7 +11,7 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     numberGeneratorSpy = jasmine.createSpyObj('NumberGeneratorService', ['generateRows']);
-    numberGeneratorSpy.generateRows.and.returnValue(Promise.resolve([]));
+    numberGeneratorSpy.generateRows.and.returnValue([]);
 
     await TestBed.configureTestingModule({
       imports: [FormsModule, DashboardComponent],
@@ -36,26 +36,26 @@ describe('DashboardComponent', () => {
     expect(component.maxRows).toBe(MAX_ROWS);
   });
 
-  it('should call service generateRows with rowCount and populate numberList', async () => {
+  it('should call service generateRows with rowCount and populate numberList', () => {
     const mockRows = [
       [1, 2, 3, 4, 5, 6, 7],
       [10, 11, 12, 13, 14, 15, 16]
     ];
-    numberGeneratorSpy.generateRows.and.returnValue(Promise.resolve(mockRows));
+    numberGeneratorSpy.generateRows.and.returnValue(mockRows);
 
     component.rowCount = 2;
-    await component.generate();
+    component.generate();
 
     expect(numberGeneratorSpy.generateRows).toHaveBeenCalledWith(2);
     expect(component.numberList()).toEqual(mockRows);
   });
 
-  it('should support generating a different number of rows', async () => {
+  it('should support generating a different number of rows', () => {
     const mockRows = [[1, 2, 3, 4, 5, 6, 7]];
-    numberGeneratorSpy.generateRows.and.returnValue(Promise.resolve(mockRows));
+    numberGeneratorSpy.generateRows.and.returnValue(mockRows);
 
     component.rowCount = 1;
-    await component.generate();
+    component.generate();
 
     expect(numberGeneratorSpy.generateRows).toHaveBeenCalledWith(1);
     expect(component.numberList()).toEqual(mockRows);
