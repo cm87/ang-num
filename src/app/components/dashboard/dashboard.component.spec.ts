@@ -11,6 +11,7 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     numberGeneratorSpy = jasmine.createSpyObj('NumberGeneratorService', ['generateRows']);
+    numberGeneratorSpy.generateRows.and.returnValue([]);
 
     await TestBed.configureTestingModule({
       imports: [FormsModule, DashboardComponent],
