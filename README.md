@@ -1,27 +1,54 @@
-# AngularNumbers
+# Numbers Generator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+Applicazione Angular per la generazione di righe di numeri casuali. Ogni riga contiene 6 numeri principali ordinati e un numero "superstar" univoco.
 
-## Development server
+## Tecnologie
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Angular](https://angular.dev) 21 (standalone components, signals, new control flow)
+- [TypeScript](https://www.typescriptlang.org) 5.9
+- [Bootstrap](https://getbootstrap.com) 5
 
-## Code scaffolding
+## Prerequisiti
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js `^20.19.0 || ^22.12.0 || >=24.0.0`
+- Angular CLI 21
+
+## Avvio sviluppo
+
+```bash
+npm start
+```
+
+L'applicazione e' disponibile su `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm run build
+```
 
-## Running unit tests
+Gli artefatti di build si trovano in `dist/angular-numbers/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Test
 
-## Running end-to-end tests
+```bash
+npm test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+I test unitari vengono eseguiti con Karma in modalita headless.
 
-## Further help
+## Deploy su GitHub Pages
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm run deploy
+```
+
+Lo script builda l'applicazione in produzione e la pubblica tramite `angular-cli-ghpages` sul branch `gh-pages`.
+
+## Struttura del progetto
+
+- `src/app/app.component.ts` — root component standalone
+- `src/app/app.routes.ts` — definizione delle route con lazy loading
+- `src/app/components/dashboard/` — componente principale (generazione numeri)
+- `src/app/service/number-generator.service.ts` — logica di generazione numeri
+
