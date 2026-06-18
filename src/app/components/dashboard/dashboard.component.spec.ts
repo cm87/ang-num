@@ -11,10 +11,10 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     numberGeneratorSpy = jasmine.createSpyObj('NumberGeneratorService', ['generateRows']);
+    numberGeneratorSpy.generateRows.and.returnValue([]);
 
     await TestBed.configureTestingModule({
-      imports: [FormsModule],
-      declarations: [DashboardComponent],
+      imports: [FormsModule, DashboardComponent],
       providers: [
         { provide: NumberGeneratorService, useValue: numberGeneratorSpy }
       ]
@@ -47,7 +47,7 @@ describe('DashboardComponent', () => {
     component.generate();
 
     expect(numberGeneratorSpy.generateRows).toHaveBeenCalledWith(2);
-    expect(component.numberList).toEqual(mockRows);
+    expect(component.numberList()).toEqual(mockRows);
   });
 
   it('should support generating a different number of rows', () => {
@@ -58,12 +58,12 @@ describe('DashboardComponent', () => {
     component.generate();
 
     expect(numberGeneratorSpy.generateRows).toHaveBeenCalledWith(1);
-    expect(component.numberList).toEqual(mockRows);
+    expect(component.numberList()).toEqual(mockRows);
   });
 
   it('should clear the number list', () => {
-    component.numberList = [[1, 2, 3, 4, 5, 6, 7]];
+    component.numberList.set([[1, 2, 3, 4, 5, 6, 7]]);
     component.clear();
-    expect(component.numberList.length).toBe(0);
+    expect(component.numberList().length).toBe(0);
   });
 });

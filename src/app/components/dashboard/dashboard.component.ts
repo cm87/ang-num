@@ -1,5 +1,5 @@
-
-import { Component } from '@angular/core';
+import { Component, OnInit, signal, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { NumberGeneratorService, MAX_ROWS } from '../../service/number-generator.service';
 
 /**
@@ -7,18 +7,25 @@ import { NumberGeneratorService, MAX_ROWS } from '../../service/number-generator
  *
  * Delega l'algoritmo di generazione al {@link NumberGeneratorService},
  * mantenendo come unica responsabilità la gestione dello stato della UI.
+ *
+ * Utilizza i nuovi **Angular Signals** per lo stato reattivo.
  */
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+
+  private readonly numberGeneratorService = inject(NumberGeneratorService);
 
   /**
    * Lista delle righe generate; ogni riga contiene 6 numeri principali ordinati + 1 superstar.
+   * Signal reattivo per tracciare lo stato.
    */
-  numberList: Array<Array<number>> = [];
+  numberList = signal<Array<Array<number>>>([]);
 
   /**
    * Numero di righe che l'utente desidera generare.
@@ -30,7 +37,11 @@ export class DashboardComponent {
    */
   readonly maxRows = MAX_ROWS;
 
-  constructor(private readonly numberGeneratorService: NumberGeneratorService) {}
+  constructor() {}
+
+  ngOnInit(): void {
+    this.generate();
+  }
 
   /**
    * Genera le righe di numeri casuali in base alla scelta dell'utente.
@@ -38,14 +49,14 @@ export class DashboardComponent {
    * Nessun numero principale è ripetuto tra righe diverse.
    */
   generate(): void {
-    this.numberList = this.numberGeneratorService.generateRows(this.rowCount);
+    this.numberList.set(this.numberGeneratorService.generateRows(this.rowCount));
   }
 
   /**
    * Svuota la lista delle righe generate.
    */
   clear(): void {
-    this.numberList = [];
+    this.numberList.set([]);
   }
 
 }

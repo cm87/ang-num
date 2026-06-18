@@ -7,13 +7,6 @@ import {
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
-declare const require: {
-  context(path: string, deep?: boolean, filter?: RegExp): {
-    keys(): string[];
-    <T>(id: string): T;
-  };
-};
-
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
@@ -21,7 +14,7 @@ getTestBed().initTestEnvironment(
   { teardown: { destroyAfterEach: true }},
 );
 
-// Then we find all the tests.
-const context = require.context('./', true, /\.spec\.ts$/);
-// And load the modules.
-context.keys().map(context);
+// Importa esplicitamente i test per compatibilità con Angular moderno.
+import './app/app.component.spec';
+import './app/components/dashboard/dashboard.component.spec';
+import './app/service/number-generator.service.spec';
